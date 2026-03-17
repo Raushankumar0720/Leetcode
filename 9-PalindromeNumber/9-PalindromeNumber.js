@@ -1,4 +1,4 @@
-// Last updated: 3/17/2026, 11:39:22 PM
+// Last updated: 3/17/2026, 11:39:40 PM
 1// brute force method
 2
 3// /**
@@ -25,7 +25,7 @@
 24
 25
 26
-27    // optimised 
+27    // optimised methoid
 28
 29
 30    var isPalindrome = function (x) {
