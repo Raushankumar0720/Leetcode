@@ -1,4 +1,4 @@
-// Last updated: 4/9/2026, 9:55:22 AM
+// Last updated: 4/9/2026, 9:55:51 AM
 1// class Solution {
 2// public:
 3// bool isVowel(char c){
@@ -34,21 +34,18 @@
 33    string reverseVowels(string s) {
 34        vector<char> vowels;
 35        
-36        // Step 1: Collect vowels
-37        for (char c : s) {
-38            if (isVowel(c)) vowels.push_back(c);
-39        }
-40        
-41        // Step 2: Reverse the collected vowels
-42        int idx = vowels.size() - 1;
-43        
-44        // Step 3: Replace vowels in original string
-45        for (int i = 0; i < s.size(); i++) {
-46            if (isVowel(s[i])) {
-47                s[i] = vowels[idx--];
-48            }
-49        }
-50        
-51        return s;
-52    }
-53};
+36        for (char c : s) {
+37            if (isVowel(c)) vowels.push_back(c);
+38        }
+39        
+40        int idx = vowels.size() - 1;
+41        
+42        for (int i = 0; i < s.size(); i++) {
+43            if (isVowel(s[i])) {
+44                s[i] = vowels[idx--];
+45            }
+46        }
+47        
+48        return s;
+49    }
+50};
