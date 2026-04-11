@@ -1,0 +1,16 @@
+// Last updated: 4/11/2026, 3:57:33 PM
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if (s.size() != t.size()) return false;
+
+        int count[26] = {0};
+
+        for (char c : s) count[c - 'a']++;
+        for (char c : t) {
+            if (--count[c - 'a'] < 0) return false;
+        }
+
+        return true;
+    }
+};
