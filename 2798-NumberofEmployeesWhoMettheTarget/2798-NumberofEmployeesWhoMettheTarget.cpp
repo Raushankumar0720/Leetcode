@@ -1,4 +1,4 @@
-// Last updated: 5/3/2026, 10:01:50 PM
+// Last updated: 5/3/2026, 10:02:33 PM
 1class Solution {
 2public:
 3    int numberOfEmployeesWhoMetTarget(vector<int>& hours, int target) {
