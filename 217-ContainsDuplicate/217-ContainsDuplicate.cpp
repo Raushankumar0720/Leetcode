@@ -1,15 +1,17 @@
-// Last updated: 3/26/2026, 11:29:24 PM
-1
-2class Solution {
-3public:
-4    bool containsDuplicate(vector<int>& nums) {
-5        sort(nums.begin(), nums.end()); // O(n log n)
-6        for (int i = 1; i < nums.size(); i++) {
-7            if (nums[i] == nums[i - 1]) {
-8                return true; // Duplicate found
+// Last updated: 6/16/2026, 11:46:34 PM
+1class Solution {
+2public:
+3    bool containsDuplicate(vector<int>& nums) {
+4        unordered_set <int> exist;
+5
+6        for(int num : nums){
+7            if(!exist.count(num)){
+8                exist.insert(num);
 9            }
-10        }
-11        return false; // No duplicates
-12    }
-13};
-14
+10            else{
+11                return true;
+12            }
+13        }
+14        return false;
+15    }
+16};
