@@ -1,0 +1,14 @@
+// Last updated: 6/26/2026, 10:29:55 PM
+class Solution {
+public:
+    string convertToTitle(int n) {
+        string res="";
+        while(n){
+            n--; 
+            res.push_back('A' + (n % 26));
+            n /= 26;
+        }
+        reverse(res.begin(), res.end());
+        return res;
+    }
+};
