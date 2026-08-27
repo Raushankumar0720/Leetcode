@@ -1,0 +1,17 @@
+// Last updated: 8/27/2026, 5:12:40 PM
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+
+        vector<vector<int>> newMatrix(n, vector<int>(n));
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                newMatrix[j][n - 1 - i] = matrix[i][j];
+            }
+        }
+
+        matrix = newMatrix;
+    }
+};
